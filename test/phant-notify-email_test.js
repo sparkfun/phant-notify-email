@@ -3,6 +3,8 @@
 var PhantNotify = require('../lib/phant-notify-email.js'),
     notify = PhantNotify();
 
+notify.useSendmail();
+
 exports.phantNotify = {
 
   setUp: function(done) {
