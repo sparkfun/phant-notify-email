@@ -6,18 +6,26 @@ var PhantNotify = require('../lib/phant-notify-email.js'),
 exports.phantNotify = {
 
   setUp: function(done) {
+
+    this.stream = {
+      publicKey: 'abcdefg',
+      privateKey: 'hijklmnop',
+      deleteKey: 'qrstuv'
+    };
+
     done();
   },
 
-  tearDown: function(done) {
-    done();
-  },
-
-  'no args': function(test) {
+  'create email': function(test) {
 
     test.expect(1);
-    test.ok(notify, 'should be ok');
-    test.done();
+
+    notify.create({to: 'todd.treece@sparkfun.com'}, this.stream, function(err) {
+
+      test.ok(!err, 'should send mail');
+      test.done();
+
+    });
 
   }
 
