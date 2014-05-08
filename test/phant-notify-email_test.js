@@ -13,5 +13,13 @@ exports.phantNotify = {
     done();
   },
 
+  'no args': function(test) {
+
+    test.expect(1);
+    test.ok(notify, 'should be ok');
+    test.done();
+
+  }
+
 };
 

@@ -14,8 +14,9 @@
     "type": "git",
     "url": "git://github.com/sparkfun/phant-notify-email"
   },
-  "license":"GPL-3.0",
+  "license": "GPL-3.0",
   "dependencies": {
+    "nodemailer": "^0.6.3"
   },
   "devDependencies": {
     "grunt": "^0.4.4",
