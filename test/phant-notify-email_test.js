@@ -3,16 +3,24 @@
 var PhantNotify = require('../lib/phant-notify-email.js'),
     notify = PhantNotify();
 
-notify.useSendmail();
+notify.useSMTP({
+  host: "mailtrap.io",
+  port: 2525,
+  auth: {
+    user: "20205073196204607",
+    pass: "4c566b63ca8481"
+  }
+});
 
 exports.phantNotify = {
 
   setUp: function(done) {
 
     this.stream = {
-      publicKey: 'abcdefg',
-      privateKey: 'hijklmnop',
-      deleteKey: 'qrstuv'
+      title: 'Test Stream',
+      publicKey: Math.random().toString(36).substring(6),
+      privateKey: Math.random().toString(36).substring(6),
+      deleteKey: Math.random().toString(36).substring(6)
     };
 
     done();
