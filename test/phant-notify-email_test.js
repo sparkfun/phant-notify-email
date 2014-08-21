@@ -1,7 +1,7 @@
 'use strict';
 
 var PhantNotify = require('../lib/phant-notify-email.js'),
-    notify = PhantNotify();
+    notify = PhantNotify({host: 'https://data.sparkfun.com'});
 
 notify.useSMTP({
   host: "mailtrap.io",
