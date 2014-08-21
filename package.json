@@ -1,6 +1,6 @@
 {
   "name": "phant-notify-email",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "main": "lib/phant-notify-email.js",
   "description": "email notification module for phant managers",
   "homepage": "https://github.com/sparkfun/phant-notify-email",
